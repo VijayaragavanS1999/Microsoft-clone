@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,44 +6,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./index.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;900&display=swap" rel="stylesheet">
+   
     <title>Microsoft</title>
-</head>
+</head> 
 <body>
-    
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+  
+ 
     <div class= "container">
         <!-- Navbar -->
         <div class="navbar">
-          <img class="nav-logo" src="image/logo (1).png" alt="microsoft">
           
-            <ul class="nav-list">
+           <img class="nav-logo" src="image/logo (1).png" alt="microsoft">
+           <ul class="nav-list">
                 <li class="nav-item"> <a href="">Microsoft 365</a></li>
                 <li class="nav-item"> <a href="">Teams</a></li>
                 <li class="nav-item"> <a href="">Windows</a></li>
                 <li class="nav-item"> <a href="">Surface</a></li>
                 <li class="nav-item"> <a href="">Xbox</a></li>
                 <li class="nav-item"> <a href="">Support</a></li>
-          
+               
             </ul>
-            <span>All Microsoft <i class="fa-solid fa-angle-down"></i></span>
+            <a id="dropdown" href=""><span class="dropdown">All Microsoft <i class="fa-solid fa-angle-down"></i></span></a>
             <ul class="nav-icon">
-              <li class="nav-item"> <i class="fas fa-search"></i></li>
-              <li class="nav-item"> <i class="fa-solid fa-cart-shopping"></i></li>
-              <li class="nav-item"> <i class="fa-solid fa-user"></i></li>
-              
-              
-            </ul>
-          
+              <li class="nav-item icon-1"> <i class="fas fa-search"></i></li>
+              <li class="nav-item icon-2"> <i class="fa-solid fa-cart-shopping"></i></li>
+              <li class="nav-item icon-3"> <i class="fa-solid fa-user"></i></li>  
+            </ul> 
         </div>
-        </div>
+      </div>
         
        <!-- First page -->
+       <div class=" toggle-items">
+
+        <h1 class=" toggle-item show"> <a href="">Microsoft 365</a></h1>
+        <h1 class=" toggle-item show"> <a href="">Teams</a></h1>
+        <h1 class=" toggle-item show"> <a href="">Windows</a></h1>
+        <h1 class=" toggle-item show"> <a href="">Surface</a></h1>
+        <h1 class="toggle-item show"> <a href="">Xbox</a></h1>
+        <h1 class=" toggle-item show"> <a href="">Support</a></h1>
+      </div>
        <div class="first-page-bg">
         <div class="first-page">
-        <h1>Microsoft 365</h1>
-        <p>Premium Office apps, extra cloud storage, advanced security, and more - all in one convenient subscription</p>
-        <a href="#" class="btn">For up to 6 people</a>
-        <a href="#" class="for1person">For 1 person <i class="fa-solid fa-angle-right"></i> </a>
-               </div>
+           <h1>Microsoft 365</h1>
+           <p>Premium Office apps, extra cloud storage, advanced security, and more - all in one convenient subscription</p>
+           <a href="#" class="btn">For 1 person</a>
+           <a href="#" class="btn2">For up to 6 people <i class="fa-solid fa-angle-right"></i> </a>
+        </div>
        </div>
 
        <!-- icon section -->
@@ -63,20 +73,18 @@
         </div>
         <div class="icon">
         <i class="fa-brands fa-microsoft "></i>
-        <a href="#">get windows 11</a>
+        <a href="#">Get windows 11</a>
        </div>
 
-        </div>
-        
-        
-       <div class= "container">
+      </div>
+      <div class= "container">
        <!-- card1 -->
        <div class="home-card">
         <div >
-          <button class="card-btn">New</button>
-          <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Surface-Laptop-Go-2-01-M01?wid=515&hei=293&fit=crop" alt="">
           
-          <h2>Surface Laptop Go 2</h2>
+          <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Surface-Laptop-Go-2-01-M01?wid=515&hei=293&fit=crop" alt="">
+          <button class="card-btn">New</button>
+          <h4 class="btn-h">Surface Laptop Go 2</h4>
           <p>A sleek laptop with a 12.4-inch touchscreen, great typing experience and improved HD camera</p>
           <a href="#">Learn more </a>
           <i class="fa-solid fa-angle-right"></i>
@@ -112,11 +120,12 @@
        </div>
 
         <!-- card2 -->
-        <h1>For bussiness</h1>
+        <h1 class="card2-title">For bussiness</h1>
         <div class="home-card">
           <div >
-            <button class="card-btn">New</button>
+            
             <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Surface-Laptop-Go-2-03-M01?wid=515&hei=293&fit=crop" alt="">
+            <button class="card-btn">New</button>
             <h2>Surface Laptop Go 2 for Business</h2>
             <p>A sleek, portable laptop featuring a great typing experience, Windows 11 Pro and professional-grade performance.</p>
             <a href="#">Learn more <i class="fa-solid fa-angle-right"></i></a>
@@ -244,7 +253,24 @@
     </ul>
   </div>
 </div>
+   <script>
+    document.querySelector('.menu-btn').addEventListener('click',()=>{
+      document.querySelector('.toggle-items').classList.toggle('show')
     
+    })
+   </script>
+
+   <!-- <script>
+    document.querySelector('.menu-btn').addEventListener('click',()=>{
+     const property=  document.querySelector('.toggle-items')
+
+
+     if (true){
+      check.style.display="flex"
+     }else{check.style.display="none"}
+     true=!true;
+    })
+   </script> -->
     
 </body>
 </html>
